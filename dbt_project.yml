@@ -14,3 +14,15 @@ target-path: "target"
 clean-targets:
   - "target"
   - "dbt_packages"
+
+vars:
+  load_date: '1992-01-08'
+
+models:
+  gj_test1:
+  stage:
+    tags: 
+      - 'stg'
+    +materialized: view
+  hub:
+    +materialized: incremental
