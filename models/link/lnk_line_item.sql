@@ -1,12 +1,13 @@
 {{
   config(
-    schema='LNK'
+    schema='LNK',
+    materialized='incremental'
   )
 }}
 
 
 {%- set source_model = "stg_lineitem" -%}
-{%- set src_pk = "LINEITEM_PK" -%}
+{%- set src_pk = "LINEITEM_ORDER_PS_PK" -%}
 {%- set src_fk = ["ORDER_PK", "LINEITEM_PK", "PARTSUPP_PK"] -%}
 {%- set src_ldts = "LOAD_DATE" -%}
 {%- set src_source = "RECORD_SOURCE" -%}

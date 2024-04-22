@@ -1,6 +1,7 @@
 {{
   config(
-    schema='SAT'
+    schema='SAT',
+    materialized='incremental'
   )
 }}
 

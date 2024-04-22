@@ -1,9 +1,9 @@
 {{
   config(
-    schema='HUB'
+    schema='HUB',
+    materialized='incremental'
   )
 }}
-
 
 {%- set source_model = "stg_region" -%}
 {%- set src_pk = "REGION_PK" -%}

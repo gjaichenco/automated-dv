@@ -1,6 +1,7 @@
 {{
   config(
-    schema='LNK'
+    schema='LNK',
+    materialized='incremental'
   )
 }}
 

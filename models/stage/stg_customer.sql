@@ -8,9 +8,14 @@
 source_model: 'src_customer'
 derived_columns:
   CUSTOMER_KEY: 'C_CUSTKEY'
+  NATION_KEY: 'C_NATIONKEY'
   RECORD_SOURCE: '!TPCH-SOURCE'
 hashed_columns:
   CUSTOMER_PK: 'CUSTOMER_KEY'
+  NATION_PK: 'NATION_KEY'
+  CUSTOMER_NATION_PK: 
+       - 'CUSTOMER_KEY'
+       - 'NATION_KEY'
   CUSTOMER_HASHDIFF:
     is_hashdiff: true
     columns:

@@ -1,6 +1,7 @@
 {{
   config(
-    schema='HUB'
+    schema='HUB',
+    materialized='incremental'
   )
 }}
 
