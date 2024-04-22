@@ -8,9 +8,14 @@
 source_model: 'src_supplier'
 derived_columns:
   SUPP_KEY: 'S_SUPPKEY'
+  NATION_KEY: 'S_NATIONKEY'
   RECORD_SOURCE: '!TPCH-SOURCE'
 hashed_columns:
   SUPP_PK: 'SUPP_KEY'
+  NATION_PK: 'NATION_KEY'
+  SUPP_NATION_PK:
+      - 'SUPP_KEY'
+      - 'NATION_KEY'
   SUPP_HASHDIFF:
     is_hashdiff: true
     columns:

@@ -6,9 +6,9 @@
 }}
 
 
-{%- set source_model = "stg_lineitem" -%}
-{%- set src_pk = "LINEITEM_ORDER_PS_PK" -%}
-{%- set src_fk = ["ORDER_PK", "LINEITEM_PK", "PARTSUPP_PK"] -%}
+{%- set source_model = "stg_customer" -%}
+{%- set src_pk = "CUSTOMER_NATION_PK" -%}
+{%- set src_fk = ["CUSTOMER_PK", "NATION_PK"] -%}
 {%- set src_ldts = "LOAD_DATE" -%}
 {%- set src_source = "RECORD_SOURCE" -%}
 

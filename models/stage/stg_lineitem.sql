@@ -20,6 +20,11 @@ hashed_columns:
   PARTSUPP_PK:
     - 'PART_KEY'
     - 'SUPP_KEY'
+  LINEITEM_ORDER_PS_PK:
+    - 'ORDER_KEY'
+    - 'L_LINENUMBER'
+    - 'PART_KEY'
+    - 'SUPP_KEY'
   LINEITEM_HASHDIFF:
     is_hashdiff: true
     columns:
